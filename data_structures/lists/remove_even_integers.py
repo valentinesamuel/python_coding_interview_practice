@@ -20,7 +20,6 @@ def remove_even(lst):
 
     result = []
     for idx in range(len(lst)):
-        # print(lst[idx])
         if lst[idx] % 2 != 0:
             result.append(lst[idx])
     return(result)
