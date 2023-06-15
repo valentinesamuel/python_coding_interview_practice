@@ -3,9 +3,15 @@ def remove_even(lst):
 
     """
     for every item in the list, check the remainder using 2. If the remainder is not 0, then that number is an odd
-    number because 2 is an even number and ite can divide 
-    any even number without remainder
+    number because 2 is an even number and ite can divide any even number without remainder
     """
+
+    if len(lst) == 0:
+        return lst
+    if lst == None:
+        return 
+    if not isinstance(lst, list):
+        raise TypeError('Invalid data type. Please input a list')
 
     result = []
     for idx in range(len(lst)):
