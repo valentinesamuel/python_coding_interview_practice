@@ -2,9 +2,14 @@
 def remove_even(lst):
 
     """
-    for every item in the list, check the remainder using 2. If the remainder is not 0, then that number is an odd
-    number because 2 is an even number and ite can divide any even number without remainder
+    Problem: Implement a function that removes all the even elements from a given list.
+
+    Approach:
+    - Initial thoughts: This problem can be solved using the modulo operator, which is an efficient way to find out if there is a remainder after dividing a number.
+    
+    - Plan: Iterate through the array, check the remainder of the current number using number % 2. If the remainder is not 0, then that number is an odd number because 2 is an even number and ite can divide any even number without remainder
     """
+
 
     if len(lst) == 0:
         return lst
