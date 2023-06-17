@@ -1,4 +1,3 @@
-
 def remove_even(lst):
 
     """
@@ -73,7 +72,6 @@ def test_remove_even():
     expected = [5, 7, 9]
     assert remove_even(lst) == expected
 
-    print("All test cases passed!")
-
+    print("\n\n💯💯All test cases passed!💯💯\n\n")
 # Run the test cases
 test_remove_even()

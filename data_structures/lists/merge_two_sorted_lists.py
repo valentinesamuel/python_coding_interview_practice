@@ -79,7 +79,7 @@ def test_merge_lists():
     expected = [-2000, -133, -100, 0, 4, 2000]
     assert merge_lists(lst1, lst2) == expected
 
-    print("All test cases passed!")
+    print("\n\n💯💯All test cases passed!💯💯\n\n")
 
 
 # Run the test cases
