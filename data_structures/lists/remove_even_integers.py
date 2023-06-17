@@ -2,12 +2,24 @@
 def remove_even(lst):
 
     """
-    Problem: Implement a function that removes all the even elements from a given list.
+    PROBLEM: Implement a function that removes all the even elements from a given list.
 
-    Approach:
+    Input: A list with random integers.
+
+    Output: A list with only odd integers
+
+    Example Input: 
+    my_list = [1,2,4,5,10,6,3]  
+
+    Example Output:
+    my_list = [1,5,3]
+
+    APPROACH:
     - Initial thoughts: This problem can be solved using the modulo operator, which is an efficient way to find out if there is a remainder after dividing a number.
     
-    - Plan: Iterate through the array, check the remainder of the current number using number % 2. If the remainder is not 0, then that number is an odd number because 2 is an even number and ite can divide any even number without remainder
+    - Plan: 
+        - Iterate through the array, check the remainder of the current number using number % 2. 
+        - If the remainder is not 0, then that number is an odd number because 2 is an even number and it can divide any even number without remainder
     """
 
 
