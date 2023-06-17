@@ -64,9 +64,19 @@ def test_merge_lists():
     expected = [1, 2, 3, 4, 5]
     assert merge_lists(lst1, lst2) == expected
 
-    # Test case 3: An empty and unempty list
+    # Test case 4: An empty and unempty list
     lst1, lst2 = [1, 4, 45, 63], []
     expected = [1, 4, 45, 63]
+    assert merge_lists(lst1, lst2) == expected
+
+    # Test case 5: Same values
+    lst1, lst2 = [4, 4, 4, 4, 4, 4, 4],[4, 4, 4, 4, 4, 4, 4]
+    expected = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+    assert merge_lists(lst1, lst2) == expected
+
+    # Test case 6: Lists with negative numbers
+    lst1, lst2 = [-133, -100, 0, 4],[-2000, 2000]
+    expected = [-2000, -133, -100, 0, 4, 2000]
     assert merge_lists(lst1, lst2) == expected
 
     print("All test cases passed!")
