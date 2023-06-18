@@ -1,15 +1,15 @@
 def find_product(lst):
-    product = []
+    prod = []
     left = 1
     for num in lst:
-        product.append(left)
-        left *= num
-    
+        prod.append(left)
+        left*=num
+    print(prod)
     right = 1
     for idx in range(len(lst)-1, -1, -1):
-        product[idx] = product[idx] * right
-        right *= lst[idx]
-    
-    return product
+        prod[idx] = prod[idx] * right
+        right *= lst[idx]  
 
-print(find_product([2, 5, 9, 3, 6]))
+    return prod
+
+print(find_product([1, 2, 3, 4]))
