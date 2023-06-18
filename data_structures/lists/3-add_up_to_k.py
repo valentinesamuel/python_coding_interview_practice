@@ -50,6 +50,16 @@ def test_find_sum():
     expected = [21, 60]
     assert find_sum(lst, k) == expected
 
+    # Testcase 2: No solution
+    lst, k = [1, 2, 3, 4, 5], 10
+    expected = []
+    assert find_sum(lst, k) == expected
+
+    # Testcase 3: Empty list
+    lst, k = [], 5
+    expected = []
+    assert find_sum(lst, k) == expected
+
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
 # Run the test cases
