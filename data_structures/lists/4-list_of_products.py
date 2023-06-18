@@ -42,7 +42,6 @@ def find_product(lst):
     for num in lst:
         prod.append(left)
         left*=num
-    print(prod)
     right = 1
     for idx in range(len(lst)-1, -1, -1):
         prod[idx] = prod[idx] * right
