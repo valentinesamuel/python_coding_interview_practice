@@ -43,6 +43,40 @@ def right_rotate(lst, k):
     return left+right
 
 
+def test_right_rotate():
+    # Testcase 1: Normal input
+    lst = [1, 2, 3, 4, 5]
+    k = 2
+    expected = [4, 5, 1, 2, 3]
+    assert right_rotate(lst, k) == expected
+
+    # Testcase 2: Empty list
+    lst = []
+    k = 3
+    expected = []
+    assert right_rotate(lst, k) == expected
+
+    # Testcase 3: List with one element
+    lst = [5]
+    k = 1
+    expected = [5]
+    assert right_rotate(lst, k) == expected
+
+    # Testcase 4: k is larger than the length of the list
+    lst = [1, 2, 3, 4, 5]
+    k = 7
+    expected = [4, 5, 1, 2, 3]
+    assert right_rotate(lst, k) == expected
+
+    # Testcase 5: k is a negative number
+    lst = [1, 2, 3, 4, 5]
+    k = -2
+    expected = [3, 4, 5, 1, 2]
+    assert right_rotate(lst, k) == expected
+
+    print("\n\n💯💯All test cases passed!💯💯\n\n")
+
+
 """
                 Explanation of k mod len(lst)
     Imagine you have a circular track with 10 positions labeled from 0 to 9. You have a toy car that you want to move along this track, and you have a number cube with numbers from 1 to 6 on its sides. Each time you roll the cube, it tells you how many positions you should move the car forward.
