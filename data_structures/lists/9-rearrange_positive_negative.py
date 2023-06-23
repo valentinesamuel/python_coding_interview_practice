@@ -13,7 +13,7 @@ def rearrange(lst):
     [-1,-9,-6,10,20,4,5]
 
     APPROACH:
-    - Initial thoughts: We can use a two pointers for this
+    - Initial thoughts: We can use two pointers for this
 
     - Plan: 
         - Let the leftmostindex be 0 as it is the first item in the array
