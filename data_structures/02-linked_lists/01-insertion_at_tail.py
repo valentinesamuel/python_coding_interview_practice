@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next_element = None
 
+
 class LinkedList:
     def __init__(self):
         self.head_node = None
@@ -11,13 +12,13 @@ class LinkedList:
         return self.head_node
 
     def is_empty(self):
-        if(self.head_node is None):  
+        if (self.head_node is None):
             return True
         else:
             return False
 
     def print_list(self):
-        if(self.is_empty()):
+        if (self.is_empty()):
             print("List is Empty")
             return False
         temp = self.head_node
@@ -44,7 +45,7 @@ class LinkedList:
 
         APPROACH:
         - Initial thoughts: We shold look for a way to add the node at the first place without losing pointers
-        
+
         - Plan: 
             - check if the linked list is empty. If it is, assign the node to the be the head node of the linked list
             - if the list is not empty, get the head pointer of the list and iterate till the current node's pointer is None.
@@ -54,13 +55,24 @@ class LinkedList:
         new_node = Node(value)
         if self.get_head() is None:
             self.head_node = new_node
-            return 
+            return
         current = self.get_head()
         while current.next_element is not None:
             current = current.next_element
         current.next_element = new_node
         return
-    
+
+    def search(self, value):
+        if self.get_head() == None:
+            return False
+        current = self.get_head()
+        while current.next_element:
+            if current.data == value:
+                return True
+            current = current.next_element
+        return False
+
+
 def test_insert_at_tail():
     # Test Case 1: Inserting into an empty list
     linked_list = LinkedList()
@@ -103,5 +115,6 @@ def test_insert_at_tail():
     assert linked_list.print_list() == True
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
+
 
 test_insert_at_tail()
