@@ -27,3 +27,15 @@ class LinkedList:
         print(temp.data, "-> None")
         return True
 
+    def insert_at_tail(self, value):
+
+        new_node = Node(value)
+        if self.get_head() is None:
+            self.head_node = new_node
+            return 
+        current = self.get_head()
+        while current.next_element is not None:
+            current = current.next_element
+        current.next_element = new_node
+        return
+    
