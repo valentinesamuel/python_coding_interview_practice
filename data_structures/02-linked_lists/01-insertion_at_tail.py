@@ -28,6 +28,19 @@ class LinkedList:
         print(temp.data, "-> None")
         return True
 
+    def search(self, value):
+        if self.get_head() == None:
+            return False
+        current = self.get_head()
+        while current.next_element:
+            if current.data == value:
+                return True
+            current = current.next_element
+        if current.data == value:
+                return True
+        return False
+
+
     def insert_at_tail(self, value):
         """
         PROBLEM: We need to insert a new object at the end of the linked list. You can naturally guess, that this newly added node will point to None as it is at the tail.
@@ -62,21 +75,14 @@ class LinkedList:
         current.next_element = new_node
         return
 
-    def search(self, value):
-        if self.get_head() == None:
-            return False
-        current = self.get_head()
-        while current.next_element:
-            if current.data == value:
-                return True
-            current = current.next_element
-        return False
 
 
-def test_insert_at_tail():
+def test_linked_list():
     # Test Case 1: Inserting into an empty list
     linked_list = LinkedList()
     linked_list.insert_at_tail(1)
+    assert linked_list.search(1) == True
+    assert linked_list.search(2) == False
     assert linked_list.print_list() == True
 
     # Test Case 2: Inserting into a non-empty list
@@ -85,6 +91,10 @@ def test_insert_at_tail():
     linked_list.insert_at_tail(2)
     linked_list.insert_at_tail(3)
     assert linked_list.print_list() == True
+    assert linked_list.search(1) == True
+    assert linked_list.search(2) == True
+    assert linked_list.search(3) == True
+    assert linked_list.search(4) == False
 
     # Test Case 3: Inserting multiple values into an empty list
     linked_list = LinkedList()
@@ -92,6 +102,10 @@ def test_insert_at_tail():
     linked_list.insert_at_tail(2)
     linked_list.insert_at_tail(3)
     assert linked_list.print_list() == True
+    assert linked_list.search(1) == True
+    assert linked_list.search(2) == True
+    assert linked_list.search(3) == True
+    assert linked_list.search(4) == False
 
     # Test Case 4: Inserting multiple values into a non-empty list
     linked_list = LinkedList()
@@ -100,12 +114,20 @@ def test_insert_at_tail():
     linked_list.insert_at_tail(3)
     linked_list.insert_at_tail(4)
     assert linked_list.print_list() == True
+    assert linked_list.search(1) == True
+    assert linked_list.search(2) == True
+    assert linked_list.search(3) == True
+    assert linked_list.search(4) == True
+    assert linked_list.search(5) == False
 
     # Test Case 5: Inserting a value at the tail of a large list
     linked_list = LinkedList()
     for i in range(1, 10):
         linked_list.insert_at_tail(i)
     assert linked_list.print_list() == True
+    for i in range(1, 10):
+        assert linked_list.search(i) == True
+    assert linked_list.search(10) == False
 
     # Test Case 6: Inserting a negative value at the tail
     linked_list = LinkedList()
@@ -113,8 +135,12 @@ def test_insert_at_tail():
     linked_list.insert_at_tail(-2)
     linked_list.insert_at_tail(-3)
     assert linked_list.print_list() == True
+    assert linked_list.search(-1) == True
+    assert linked_list.search(-2) == True
+    assert linked_list.search(-3) == True
+    assert linked_list.search(0) == False
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
 
 
-test_insert_at_tail()
+test_linked_list()
