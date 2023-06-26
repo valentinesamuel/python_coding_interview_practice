@@ -10,3 +10,9 @@ class LinkedList:
     def get_head(self):
         return self.head_node
 
+    def is_empty(self):
+        if(self.head_node is None):  
+            return True
+        else:
+            return False
+
