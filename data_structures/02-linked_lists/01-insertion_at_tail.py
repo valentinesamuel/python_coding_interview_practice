@@ -51,7 +51,7 @@ class LinkedList:
             - If it is, then we return true else we return false.
             - An edge case is to check the last node before we return false since we did not check it in the loop because the last node's next_element points to null
         """
-        
+
         if self.get_head() == None:
             return False
         current = self.get_head()
@@ -62,7 +62,6 @@ class LinkedList:
         if current.data == value:
                 return True
         return False
-
 
     def insert_at_tail(self, value):
         """
