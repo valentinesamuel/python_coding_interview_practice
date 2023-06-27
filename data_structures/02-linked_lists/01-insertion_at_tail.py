@@ -60,7 +60,7 @@ class LinkedList:
                 return True
             current = current.next_element
         if current.data == value:
-                return True
+            return True
         return False
 
     def insert_at_tail(self, value):
@@ -97,6 +97,34 @@ class LinkedList:
         current.next_element = new_node
         return
 
+    def delete(self, value):
+        if not self.get_head():
+            return
+        if self.get_head().data == value:
+            self.delete_at_head()
+            return True
+
+        if self.search(value):
+            current = self.get_head()
+            follower = current
+            while current.next_element:
+                if current.data == value:
+                    follower.next_element = current.next_element
+                    return True
+                follower.next_element = current
+                current = current.next_element
+            if current.data == value:
+                follower.next_element = current.next_element
+                return True
+            return False
+        return False
+
+    def delete_at_head(self):
+        first_element = self.get_head()
+        if (first_element is not None):
+            self.head_node = first_element.next_element
+            first_element.next_element = None
+        return
 
 
 def test_linked_list():
