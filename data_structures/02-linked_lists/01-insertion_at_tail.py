@@ -28,6 +28,17 @@ class LinkedList:
         print(temp.data, "-> None")
         return True
 
+    def length(self):
+        len = 0
+        if self.get_head():
+            return len
+        curr = self.get_head()
+        while curr.next_element:
+            len+=1
+            curr = curr.next_element
+        len+=1
+        return len
+
     def search(self, value):
         """
         PROBLEM: To search for a specific value in a linked list, there is no other approach but to traverse the whole list until we find the desired value. In that sense, the search operation in linked lists is similar to the linear search in normal lists or arrays - all of them take O(n) amount of time.
