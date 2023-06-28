@@ -1,6 +1,7 @@
 from LinkedListClass import LinkedList as linked_list
 
 def find_mid(lst):
+
     if not lst.get_head():
         return
     trav = 0
