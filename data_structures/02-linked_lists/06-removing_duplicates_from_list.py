@@ -2,7 +2,7 @@ from LinkedListClass import LinkedList as linked_list
 
 def remove_duplicates(lst):
     """
-    PROBLEM: we can use a hashmap for this and store the frequency of the node in a hashmap. Then traverse through the hashmap again and reorder the node pointer
+    PROBLEM: You will now be implementing the remove_duplicates() function. When a linked list is passed to this function, it removes any node which is a duplicate of another existing node.
 
     Input: A linked list with duplicate nodes.
 
@@ -15,7 +15,7 @@ def remove_duplicates(lst):
     LinkedList = 1->2->3->4->5->6
 
     APPROACH:
-    - Initial thoughts: We shold look for a way to safely delete the node. We can try to serach for it to make sure it exists
+    - Initial thoughts: we can use a hashmap for this and store the frequency of the node in a hashmap. Then traverse through the hashmap again and reorder the node pointer
 
     - Plan: 
         - check if the linked list is empty 
