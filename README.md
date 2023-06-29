@@ -5,6 +5,6 @@
 I also accompany these solutions with a notion database [here](https://valentinesamuel.notion.site/1acf3e07c3bd4a14bc0a8a2b861308ed?v=48cb6248686540b994a7aa47908a3f21&pvs=4).
 
 
-Or copy this link in toyour browser
+Or copy this link into your browser
 
 https://valentinesamuel.notion.site/1acf3e07c3bd4a14bc0a8a2b861308ed?v=48cb6248686540b994a7aa47908a3f21&pvs=4
