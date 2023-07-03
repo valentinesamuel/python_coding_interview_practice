@@ -1,5 +1,6 @@
 from LinkedListClass import LinkedList as linked_list
 
+
 def find_nth(lst, n):
     """
     PROBLEM: In the find_nth function, a certain N is specified as an argument. You simply need to return the node which is N spaces away from the None end of the linked list.
@@ -34,10 +35,10 @@ def find_nth(lst, n):
     if n > length:
         return -1
 
-    index = (length - n) 
+    index = (length - n)
 
     while index > 0:
         curr = curr.next_element
         index -= 1
-    
+
     return curr.data
