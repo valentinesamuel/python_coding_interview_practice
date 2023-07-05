@@ -3,17 +3,17 @@ from StackClass import MyStack as Stack
 
 def reverseK(queue, k):
     """
-    PROBLEM: 
+    PROBLEM: Implement the function reverseK(queue, k) which takes a queue and a number “k” as input and reverses the first “k” elements of the queue. An illustration is also provided for your understanding. In case the value of “k” is larger than the size of the queue, is smaller than 0, or if the queue is empty, simply return None instead.
 
     Input: 
 
-    Output: 
+    Output: The queue with first “k” elements reversed. Remember to return the queue itself!
 
     Example Input: 
-    n = 3
+    Queue = [1,2,3,4,5,6,7,8,9,10], k = 5
 
     Example Output:
-    result = ["1","10","11"]
+    Queue = [5,4,3,2,1,6,7,8,9,10]
 
     APPROACH:
     - Initial thoughts: I tried but i could not solve it before my trial time of 30 mins elapsed
