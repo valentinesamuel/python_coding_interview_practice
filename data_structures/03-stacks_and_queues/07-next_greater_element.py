@@ -40,4 +40,6 @@ def next_greater_element(lst):
 
         stack.push(lst[i])
 
+    # we are basically using the stack to store elements whose next greater element have not been found
+
     return res
