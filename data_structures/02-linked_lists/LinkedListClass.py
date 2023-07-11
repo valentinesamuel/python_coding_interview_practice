@@ -1,4 +1,7 @@
 class Node:
+    """
+    A node has a data field and next element field
+    """
     def __init__(self, data):
         self.data = data
         self.next_element = None
