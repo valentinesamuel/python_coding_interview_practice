@@ -10,5 +10,9 @@ https://docs.google.com/spreadsheets/d/1Ng4JxS9Z_O0X4vwVb_w8YI-nUkXmaA5o20tSKIvk
 it contains various categories of questions.
 
 
+### You can find the course materials at 
+https://drive.google.com/drive/folders/1TcJE77meDKAMFm3poy_le0hVnDDXkbKI?usp=sharing
+
+
 
 P.S. I plan to write a proper documentation for this repo.😳😳
