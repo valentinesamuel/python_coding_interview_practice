@@ -1,6 +1,9 @@
-from LinkedListClass import LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList as linked_list, Node
+import sys
+sys.path.append('../DS_Classes/')
 
-def search(value):
+
+def search(value: Node) -> bool:
     """
     PROBLEM: To search for a specific value in a linked list, there is no other approach but to traverse the whole list until we find the desired value. In that sense, the search operation in linked lists is similar to the linear search in normal lists or arrays - all of them take O(n) amount of time.
 

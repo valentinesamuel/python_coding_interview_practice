@@ -1,7 +1,9 @@
-from QueueClass import MyQueue
+from DS_Classes.QueueClass import MyQueue as Queue
+import sys
+sys.path.append('../DS_Classes/')
 
 
-def find_bin(number):
+def find_bin(number: int) -> list:
     """
     PROBLEM: Implement a function find_bin(n) which will generate binary numbers from 1 till n in the form of a string using a queue. The MyQueue and MyStack classes are provided in all of these challenges. An illustration is also provided for your understanding.
 
@@ -24,12 +26,12 @@ def find_bin(number):
             - dequeue the queue, stringify the value and append it to the result list
             - enqueue two variations of the dequeue value, one that ends with 0 and another one that ends with 1
     """
-        
+
     if not isinstance(number, int):
         return
 
     res = []
-    queue = MyQueue()
+    queue = Queue()
     queue.enqueue(1)
 
     for i in range(number):

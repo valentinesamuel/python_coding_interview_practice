@@ -1,9 +1,12 @@
-from LinkedListClass import Node, LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList as linked_list
+import sys
+sys.path.append('../DS_Classes/')
 
-def union(list1, list2):
+
+def union(list1: linked_list, list2: linked_list) -> linked_list:
     """
     PROBLEM: Given two lists, A and B, the union is the list that contains elements or objects that belong to either A, B, or to both. Given two lists, A and B, the intersection is the largest list which contains all the elements that are common to both the sets.
-    
+
     The union function will take two linked lists and return their union.
     The intersection function will return all the elements that are common between two linked lists.
 
@@ -28,7 +31,7 @@ def union(list1, list2):
     """
     if list1.get_head() is None:
         return
-    
+
     curr = list1.get_head()
     while curr.next_element:
         curr = curr.next_element
@@ -38,10 +41,11 @@ def union(list1, list2):
 
     return list1
 
-def intersection(list1, list2):
+
+def intersection(list1: linked_list, list2: linked_list) -> linked_list:
     """
     PROBLEM: Given two lists, A and B, the intersection is the largest list which contains all the elements that are common to both the sets.
-    
+
     The intersection function will return all the elements that are common between two linked lists.
 
     Input: Two linked lists.
@@ -74,7 +78,7 @@ def intersection(list1, list2):
     while curr:
         register[curr.data] = 1
         curr = curr.next_element
-    
+
     res = linked_list()
 
     curr = list2.get_head()

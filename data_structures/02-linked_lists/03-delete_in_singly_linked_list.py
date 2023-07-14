@@ -1,4 +1,6 @@
-from LinkedListClass import LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList as linked_list
+import sys
+sys.path.append('../DS_Classes/')
 
 def delete(value):
     """

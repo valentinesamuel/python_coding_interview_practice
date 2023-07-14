@@ -1,4 +1,6 @@
-from StackClass import MyStack as Stack
+from DS_Classes.StackClass import MyStack as Stack
+import sys
+sys.path.append('../DS_Classes/')
 
 
 def sort_stack(stack: Stack):

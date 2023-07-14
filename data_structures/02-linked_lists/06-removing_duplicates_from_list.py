@@ -1,6 +1,9 @@
-from LinkedListClass import LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList
+import sys
+sys.path.append('../DS_Classes/')
 
-def remove_duplicates(lst):
+
+def remove_duplicates(lst: LinkedList) -> LinkedList:
     """
     PROBLEM: You will now be implementing the remove_duplicates() function. When a linked list is passed to this function, it removes any node which is a duplicate of another existing node.
 

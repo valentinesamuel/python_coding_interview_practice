@@ -1,10 +1,12 @@
-from StackClass import MyStack as Stack
+from DS_Classes.StackClass import MyStack as Stack
+import sys
+sys.path.append('../DS_Classes/')
 
 
 class NewQueue:
     """
     PROBLEM: You have to implement the enqueue() and dequeue() functions using the MyStack class we created earlier. enqueue( ) will insert a value into the queue and dequeue( ) will remove a value from the queue.
-    
+
     Input
     enqueue( ): A value to insert into the queue
     dequeue( ): Does not require any input

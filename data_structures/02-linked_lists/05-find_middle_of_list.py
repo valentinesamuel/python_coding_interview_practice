@@ -1,6 +1,9 @@
-from LinkedListClass import LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList
+import sys
+sys.path.append('../DS_Classes/')
 
-def find_mid(lst):
+
+def find_mid(lst: LinkedList):
     """
     PROBLEM: You have to implement the find_mid() function which will take a linked list as an input and return the value of the middle node. If the length of the list is even, the middle value will occur at len(lst) / 2. For a list of odd length, the middle value will be len(lst)/2 + 1.
 
@@ -35,5 +38,5 @@ def find_mid(lst):
     curr = lst.get_head()
     while i < trav:
         curr = curr.next_element
-        i+=1
+        i += 1
     return curr.data

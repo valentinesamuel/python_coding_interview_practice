@@ -1,7 +1,10 @@
-from QueueClass import MyQueue
-from StackClass import MyStack as Stack
+from DS_Classes.QueueClass import MyQueue as Queue
+from DS_Classes.StackClass import MyStack as Stack
+import sys
+sys.path.append('../DS_Classes/')
 
-def reverseK(queue, k):
+
+def reverseK(queue: Queue, k: int):
     """
     PROBLEM: Implement the function reverseK(queue, k) which takes a queue and a number “k” as input and reverses the first “k” elements of the queue. An illustration is also provided for your understanding. In case the value of “k” is larger than the size of the queue, is smaller than 0, or if the queue is empty, simply return None instead.
 
@@ -28,11 +31,11 @@ def reverseK(queue, k):
 
     stack = Stack()
 
-    for i in range(k):
+    for _ in range(k):
         stack.push(queue.dequeue())
     while not stack.is_empty():
         queue.enqueue(stack.pop())
     for i in range(stack.size() - k):
         queue.enqueue(queue.dequeue())
-    
+
     return queue

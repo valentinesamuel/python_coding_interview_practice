@@ -1,4 +1,7 @@
-from LinkedListClass import Node, LinkedList as linked_list
+from DS_Classes.LinkedListClass import LinkedList as linked_list, Node
+import sys
+sys.path.append('../DS_Classes/')
+
 
 def insert_at_tail(value):
     """
