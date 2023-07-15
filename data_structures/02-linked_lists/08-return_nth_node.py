@@ -1,7 +1,7 @@
 from data_structures.DS_Classes.LinkedListClass import LinkedList as linked_list
 
 
-def find_nth(lst: linked_list, n: int):
+def find_nth(lst: linked_list, n: int) -> str | int:
     """
     PROBLEM: In the find_nth function, a certain N is specified as an argument. You simply need to return the node which is N spaces away from the None end of the linked list.
 
