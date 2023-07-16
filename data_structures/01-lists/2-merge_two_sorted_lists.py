@@ -1,4 +1,4 @@
-def merge_lists(lst1, lst2):
+def merge_lists(lst1: list, lst2: list) -> list:
     """
     PROBLEM: Implement a function that merges two sorted lists of m and n elements respectively, into another sorted list. 
 
@@ -70,12 +70,12 @@ def test_merge_lists():
     assert merge_lists(lst1, lst2) == expected
 
     # Test case 5: Same values
-    lst1, lst2 = [4, 4, 4, 4, 4, 4, 4],[4, 4, 4, 4, 4, 4, 4]
+    lst1, lst2 = [4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4]
     expected = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
     assert merge_lists(lst1, lst2) == expected
 
     # Test case 6: Lists with negative numbers
-    lst1, lst2 = [-133, -100, 0, 4],[-2000, 2000]
+    lst1, lst2 = [-133, -100, 0, 4], [-2000, 2000]
     expected = [-2000, -133, -100, 0, 4, 2000]
     assert merge_lists(lst1, lst2) == expected
 

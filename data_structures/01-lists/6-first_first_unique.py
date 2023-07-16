@@ -1,4 +1,4 @@
-def find_first_unique(lst):
+def find_first_unique(lst: list) -> int:
     """
     PROBLEM: Implement a function, find_first_unique(lst) that returns the first unique integer in the list.
 
@@ -27,10 +27,10 @@ def find_first_unique(lst):
     if len(lst) == 0:
         return None
     if lst == None:
-        return 
+        return
     if not isinstance(lst, list):
         raise TypeError('Invalid data type. Please input a list')
-    
+
     register = {}
     for num in lst:
         if num not in register:
@@ -75,6 +75,7 @@ def test_find_first_unique():
     assert find_first_unique(lst) == expected
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
+
 
 # Run the test cases
 test_find_first_unique()

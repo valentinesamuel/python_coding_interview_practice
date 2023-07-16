@@ -1,4 +1,4 @@
-def find_second_maximum(lst):
+def find_second_maximum(lst: list) -> int:
     """
     PROBLEM: Implement a function find_second_maximum(lst) which returns the second largest element in the list.
 
@@ -25,10 +25,10 @@ def find_second_maximum(lst):
     if len(lst) <= 1:
         return float('-inf')
     if lst == None:
-        return 
+        return
     if not isinstance(lst, list):
         raise TypeError('Invalid data type. Please input a list')
-    
+
     max = float('-inf')
     second_max = float('-inf')
     for num in lst:
@@ -41,8 +41,9 @@ def find_second_maximum(lst):
     # Check if all the values in the list are the same
     if second_max == float('-inf'):
         return float('-inf')
-    
+
     return second_max
+
 
 def test_find_second_maximum():
     # Testcase 1: Normal input
@@ -76,6 +77,7 @@ def test_find_second_maximum():
     assert find_second_maximum(lst) == expected
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
+
 
 # Run the test cases
 test_find_second_maximum()

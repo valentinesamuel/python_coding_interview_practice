@@ -1,4 +1,4 @@
-def max_min(lst):
+def max_min(lst: list) -> list:
     """
     PROBLEM: Implement a function called max_min(lst) which will re-arrange the elements of a sorted list such that the 0th index will have the largest number, the 1st index will have the smallest, and the 2nd index will have second-largest, and so on. In other words, all the even-numbered indices will have the largest numbers in the list in descending order and the odd-numbered indices will have the smallest numbers in ascending order.
 
@@ -24,15 +24,14 @@ def max_min(lst):
             - Then we move the left pointer foward and the right pointer backward.
     """
 
-
     if lst == None:
         return
     if not isinstance(lst, list):
         raise TypeError('Invalid data type. Please input a list')
     # If the list has exactly two elements and the first element is greater than the second
-    if len(lst) == 2 and lst[0] > lst[1]:  
-        return lst 
-        
+    if len(lst) == 2 and lst[0] > lst[1]:
+        return lst
+
     left = 0
     right = len(lst) - 1
     res = []
@@ -42,9 +41,10 @@ def max_min(lst):
         else:
             res.append(lst[right])
             res.append(lst[left])
-        left+=1
-        right-=1
+        left += 1
+        right -= 1
     return res
+
 
 def test_max_min():
     # Testcase 1: Normal input with an even-length list
@@ -73,5 +73,6 @@ def test_max_min():
     assert max_min(lst) == expected
 
     print("\n\n💯💯All test cases passed!💯💯\n\n")
+
 
 test_max_min()

@@ -1,4 +1,4 @@
-def rearrange(lst):
+def rearrange(lst: list) -> list:
     """
     PROBLEM: Implement a function rearrange(lst) which rearranges the elements such that all the negative elements appear on the left and positive elements appear at the right of the list. Note that it is not necessary to maintain the sorted order of the input list.
 

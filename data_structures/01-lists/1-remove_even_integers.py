@@ -1,4 +1,4 @@
-def remove_even(lst):
+def remove_even(lst: list) -> list:
     """
     PROBLEM: Implement a function that removes all the even elements from a given list.
 

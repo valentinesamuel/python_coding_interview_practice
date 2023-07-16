@@ -1,4 +1,4 @@
-def find_max_sum_sublist(lst):
+def find_max_sum_sublist(lst: list) -> int:
     """
     PROBLEM: Given an unsorted list A, the maximum sum sub list is the sub list (contiguous elements) from A for which the sum of the elements is maximum. In this challenge, we want to find the sum of the maximum sum sub list. This problem is a tricky one because the list might have negative integers in any position, so we have to cater to those negative integers while choosing the continuous sublist with the largest positive values.
 
@@ -28,7 +28,7 @@ def find_max_sum_sublist(lst):
         return 0
     if not isinstance(lst, list):
         raise Exception('Invalid data type. Please input a list')
-    
+
     max_sum = lst[0]
     curr_sum = lst[0]
     for idx in range(1, len(lst)):

@@ -1,4 +1,4 @@
-def find_sum(lst, k):
+def find_sum(lst: list, k: int) -> int:
     """
     PROBLEM: Given a list and a number "k", find two numbers from the list that sum to "k".
 
@@ -27,7 +27,7 @@ def find_sum(lst, k):
     if len(lst) == 0:
         return lst
     if lst == None:
-        return 
+        return
     if not isinstance(lst, list):
         raise TypeError('Invalid data type. Please input a list')
     if not isinstance(k, int):
@@ -43,6 +43,7 @@ def find_sum(lst, k):
             res.append(payload)
             res.append(num)
     return res
+
 
 def test_find_sum():
     # Testcase 1: Normal input
@@ -60,8 +61,8 @@ def test_find_sum():
     expected = []
     assert find_sum(lst, k) == expected
 
-
     print("\n\n💯💯All test cases passed!💯💯\n\n")
-    
+
+
 # Run the test cases
 test_find_sum()

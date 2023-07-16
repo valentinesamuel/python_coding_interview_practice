@@ -1,4 +1,4 @@
-def find_minimum(arr):
+def find_minimum(arr: list) -> int:
     """
     PROBLEM:Implement a function findMinimum(lst) which finds the smallest number in the given list.
 
@@ -35,6 +35,7 @@ def find_minimum(arr):
 
     return curr_min
 
+
 def test_find_minimum():
     # Testcase 1: Normal input
     lst = [100, 12, 34, 40]
@@ -48,11 +49,11 @@ def test_find_minimum():
 
     # Testcase 3: Negative values
     lst = [-2, -5, 234, -459]
-    expected =  -459
+    expected = -459
     assert find_minimum(lst) == expected
 
-
     print("\n\n💯💯All test cases passed!💯💯\n\n")
-    
+
+
 # Run the test cases
 test_find_minimum()
