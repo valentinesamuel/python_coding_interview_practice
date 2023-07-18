@@ -42,9 +42,6 @@ def countBiDirectionalNodes(graph):
         - when at the neighbor, check if the node in the array of the neighbors
         - if so, increase the count
         - return the number of count divided by 2
-
-
-    Note: this implementation does not work vwry weel because of the nature of input. But the concept remains clear
     """
     count = 0
 
