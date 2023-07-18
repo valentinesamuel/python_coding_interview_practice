@@ -1,4 +1,8 @@
-def DFS(graph, current_node, visited):
+from DS_Classes.GraphClass import Graph
+import sys
+sys.path.append('../DS_Classes/')
+
+def DFS(graph:Graph, current_node, visited):
     visited.append(current_node)
 
     for neighbour in graph[current_node]:

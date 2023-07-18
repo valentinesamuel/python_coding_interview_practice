@@ -1,3 +1,7 @@
+from DS_Classes.GraphClass import Graph
+import sys
+sys.path.append('../DS_Classes/')
+
 def countBiDirectionalNodes(graph):
     """
     PROBLEM: You have to implement the num_edges() function which takes an undirected graph and computes the total number of bidirectional edges. An illustration is also provided for your understanding.
