@@ -32,7 +32,7 @@ def find_min(graph: Graph, source: int, destination: int):
         - while the BFS is on going, if the node has not been visited,
             - add it to queue
             - mark it as visited,
-            - set the distance to be the distance od the popped node + 1
+            - set the distance to be the distance of the popped node + 1
             - if the node is the destination, return the distance array indexed at the destination
     """
     num_vertices = graph.vertices
