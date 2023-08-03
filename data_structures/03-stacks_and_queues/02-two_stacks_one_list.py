@@ -87,7 +87,7 @@ class TwoStacks:
             - since it at the end of the array by default, if it becomes less than the array's length, that means, there has been an insert
         - if true, then we get the element in the index of the stack's top pointer, save it and replace that element with None and return the saved value
         """
-        if self.t2 <= self.size-1:
+        if self.top2 <= self.size-1:
             x = self.arr[self.top2]
             self.top2 += 1
             return x
