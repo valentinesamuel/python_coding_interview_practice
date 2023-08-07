@@ -1,4 +1,4 @@
-from DS_Classes.TreeClass import BinarySearchTree, TreeNode
+from DS_Classes.TreeClass import TreeNode
 
 import sys
 sys.path.append('../DS_Classes/')
