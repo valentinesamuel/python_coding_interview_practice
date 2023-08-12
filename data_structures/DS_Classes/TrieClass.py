@@ -60,6 +60,9 @@ class Trie:
         strings = []
         self._get_total_words(self.root, [], strings)
         return strings
+    
+    def total_words_lenngth(self):
+        return len(self.total_words())
 
     def _get_total_words(self, node: TrieNode, string: list, strings: list):
         if node.isEndOfWord:
@@ -80,4 +83,4 @@ trie.insert('bye')
 trie.insert('their')
 trie.insert('education')
 trie.insert('educative')
-print(trie.total_words())
+print(trie.total_words_lenngth())
