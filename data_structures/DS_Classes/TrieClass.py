@@ -72,6 +72,20 @@ class Trie:
         """
         return len(self.total_words())
 
+    def sort_trie(self):
+        words = self.total_words()
+        return self._quick_sort(words)
+
+    def _quick_sort(self, arr):
+        if len(arr) <= 1:
+            return arr
+        pivot = arr[len(arr) // 2]
+        LHS = [word for word in arr if word < pivot]
+        MID = [word for word in arr if word == pivot]
+        RHS = [word for word in arr if word > pivot]
+
+        return self._quick_sort(LHS) + MID + self._quick_sort(RHS)
+
     def _get_total_words(self, node: TrieNode, string: list, strings: list):
         """
         if the current node is the end of a word,
@@ -101,4 +115,4 @@ trie.insert('bye')
 trie.insert('their')
 trie.insert('education')
 trie.insert('educative')
-print(trie.total_words_lenngth())
+print(trie.sorted_total_words())
