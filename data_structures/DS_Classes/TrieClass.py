@@ -26,7 +26,7 @@ class Trie:
     def search(self, word: str):
         """search for a word in the trie:\n
         for every char in the word, if the char not
-        children of the current node, return false, 
+        children of the current node, return false,
         otherwise, move to the next trienode and
         finally return the value os the end-of-word-ness
 
@@ -57,14 +57,32 @@ class Trie:
         return True
 
     def total_words(self):
+        """
+        create a string array and run the recursive
+        function to populate the array with all
+        the strings in the trie
+        """
         strings = []
         self._get_total_words(self.root, [], strings)
         return strings
-    
-    def total_words_lenngth(self):
+
+    def total_words_length(self):
+        """
+        return the length of the total_words array
+        """
         return len(self.total_words())
 
     def _get_total_words(self, node: TrieNode, string: list, strings: list):
+        """
+        if the current node is the end of a word,
+        join all the previous nodes as a single word
+        and add them to the strings array
+        then for every character in the children of
+        the current node, append the node to the current
+        string being made and recursively call the function
+        starting from the children at the current character,
+        then pop the last item on the string
+        """
         if node.isEndOfWord:
             strings.append("".join(string))
         for ch in node.children:
