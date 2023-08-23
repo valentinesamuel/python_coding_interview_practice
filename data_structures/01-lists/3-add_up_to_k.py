@@ -1,4 +1,4 @@
-def find_sum(lst: list, k: int) -> int:
+def find_sum_hashmap(lst: list, k: int) -> int:
     """
     PROBLEM: Given a list and a number "k", find two numbers from the list that sum to "k".
 
@@ -43,6 +43,58 @@ def find_sum(lst: list, k: int) -> int:
             res.append(payload)
             res.append(num)
     return res
+
+def find_sum(lst: list, k: int) -> int:
+    """
+    PROBLEM: Given a list and a number "k", find two numbers from the list that sum to "k".
+
+    Input: A list and a number k
+
+    Output: A list with two integers a and b that add up to k
+
+    Example Input: 
+    lst = [1,21,3,14,5,60,7,6]
+    k = 81
+
+    Example Output:
+    lst = [21,60]
+
+    APPROACH:
+    - Initial thoughts: This problem can be solved using two pointers.
+
+    - Plan: 
+        - sort the list
+        - get the left and right pointers to be at the beginning and end of the list
+        - while left is less than right:
+            - the curreent sum should be the left pointer plus the right pointer
+            - if it is the k value, return the left and right pointers
+            - if it is bigger than k, move right backwards
+            - if it is less than k, move left forwards
+    """
+
+    if len(lst) == 0:
+        return lst
+    if lst == None:
+        return
+    if not isinstance(lst, list):
+        raise TypeError('Invalid data type. Please input a list')
+    if not isinstance(k, int):
+        raise TypeError('Invalid data type. Please input a number')
+
+    lst.sort()
+    left = 0
+    right = len(lst) - 1
+
+    while left < right:
+        curr_sum = lst[left] + lst[right]
+        if curr_sum == k:
+            return [lst[left], lst[right]]
+        elif curr_sum > k:
+            right -= 1
+        else:
+            left += 1
+    
+    return []
 
 
 def test_find_sum():
